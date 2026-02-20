@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ChatBot</title>
+    <style>
+        input[type="file"]::file-selector-button, input[type="submit"] {
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        input[type="file"]::file-selector-button{
+            width: 60%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 50px;">Instagram Bot Panel</h1> 
+
+    <h2 style="text-align: center; color: #4CAF50;">تحميل ملف المنتجات</h2>
+    <form method="post" enctype="multipart/form-data" action="/upload" style="text-align: center; ">
+        <input type="file" name="file">
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
