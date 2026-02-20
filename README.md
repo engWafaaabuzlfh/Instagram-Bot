@@ -1,51 +1,54 @@
-# Instagram Bot (Flask + Webhook)
+﻿# Instagram Bot (Flask + Webhook)
 
-مشروع تجريبي لبوت إنستغرام يعتمد على Webhook عبر `Flask` مع أمثلة بسيطة للتعامل مع Graph API.
+A sample Instagram bot project that uses a `Flask` webhook, with basic examples for working with the Meta Graph API.
 
-## الملفات بعد إعادة التسمية
+## Files (After Renaming)
 
-- `instagram_webhook_app.py`: التطبيق الرئيسي (Webhook + استقبال الرسائل + رفع ملف نصي).
-- `fetch_facebook_pages.py`: مثال لجلب الصفحات/الحسابات المرتبطة عبر Graph API.
-- `instagram_messaging_examples.py`: أمثلة لجلب المحادثات وإرسال رسالة.
-- `templates/upload_panel.html`: واجهة HTML بسيطة لرفع ملف.
+- `instagram_webhook_app.py`: Main app (webhook handling, incoming message processing, and text file upload endpoint).
+- `fetch_facebook_pages.py`: Example script to fetch connected pages/accounts via Graph API.
+- `instagram_messaging_examples.py`: Example script for fetching conversations and sending messages.
+- `gemini_pil.py`: Gemini image/text processing helper used by the webhook app.
+- `templates/upload_panel.html`: Simple HTML upload panel.
 
-## المتطلبات
+## Requirements
 
 - Python 3.9+
-- مكتبات بايثون:
-  - `flask`
-  - `requests`
-  - `pillow`
+- Python packages:
+- `flask`
+- `requests`
+- `pillow`
+- `google-generativeai`
 
-يمكن التثبيت عبر:
+Install dependencies:
 
 ```bash
-pip install flask requests pillow
+pip install flask requests pillow google-generativeai
 ```
 
-## إعداد القيم الحساسة
+## Configure Sensitive Values
 
-عدّل القيم داخل `instagram_webhook_app.py`:
+Update these values in `instagram_webhook_app.py`:
 
 - `VERIFY_TOKEN`
 - `PAGE_ACCESS_TOKEN`
 
-وكذلك عدّل مفاتيح الوصول داخل:
+Update API/token placeholders in:
 
 - `fetch_facebook_pages.py`
 - `instagram_messaging_examples.py`
+- `gemini_pil.py`
 
-## التشغيل
+## Run
 
-لتشغيل التطبيق الرئيسي:
+Start the main app with:
 
 ```bash
 python instagram_webhook_app.py
 ```
 
-سيعمل افتراضيًا على المنفذ `5000`.
+By default, it runs on port `5000`.
 
-## ملاحظات
+## Notes
 
-- التطبيق يستورد `gemini_pil`، لذا يجب أن يكون الملف/الموديول موجودًا في المشروع.
-- ملفات الأمثلة تحتوي Tokens ثابتة حاليًا، والأفضل نقلها إلى متغيرات بيئة قبل الاستخدام في الإنتاج.
+- Current placeholder values are set to `DEFAULT_VALUE`.
+- For production, move all tokens/keys to environment variables.

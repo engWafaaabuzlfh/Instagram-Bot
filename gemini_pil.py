@@ -7,7 +7,7 @@ f = open("./data.txt", "r")
 
 img = PIL.Image.open("images/باندات.png")
 img2 = PIL.Image.open("images/زمزمية.png")
-genai.configure(api_key=" your api - key") # تستطيع الحصول عليه من خلال الدخول للرابط https://aistudio.google.com/app/apikey واتباع نفس الخطوات
+genai.configure(api_key="DEFAULT_VALUE") # تستطيع الحصول عليه من خلال الدخول للرابط https://aistudio.google.com/app/apikey واتباع نفس الخطوات
 generation_config = {
   "temperature": 1,
   "top_p": 0.95,
@@ -46,4 +46,5 @@ def genaiTextProccessing(text, history):
       print(response.text)
       return response.text
 #genaiTextProccessing("مرحبا", [])
+
 

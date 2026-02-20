@@ -16,8 +16,8 @@ def allowed_file(filename):
 
 app = Flask(__name__)
 
-VERIFY_TOKEN = 'YouR_Verify_Token'
-PAGE_ACCESS_TOKEN = 'YouR_Pages_Token'
+VERIFY_TOKEN = 'DEFAULT_VALUE'
+PAGE_ACCESS_TOKEN = 'DEFAULT_VALUE'
 
 HISTORY = {}
 @app.route('/webhook', methods=['GET', 'POST'])
@@ -126,3 +126,4 @@ def upload_file():
 
 if __name__ == '__main__':
     app.run(port=5000)
+

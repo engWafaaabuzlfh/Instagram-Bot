@@ -1,5 +1,5 @@
 import requests
-access_token = "EAARQOGUEiwwBOZCihpYw3ZCcww6kCprHMxFcNlSL7fc6cRpJ12t1VnDWHF4CcakYWDxfNFjvfdw8LFlggNjiHXW2pZBNNJToGbeeI09g1n8zdqtYcIZCvZBRZB3ChKRLctB8CQajiiWEEMdGhEJBixJ0yzqUoDgZCfhVoEnVDbBnOCATP1EekkpCCMU7WFZCEw1AmGWRYFA2tOl1QgQI2KPOZBuEZD"
+access_token = "DEFAULT_VALUE"
 url = f"https://graph.facebook.com/v20.0/141869042351846/conversations?platform=instagram&access_token={access_token}"
 
 response = requests.get(url)
@@ -28,3 +28,4 @@ response = requests.post(url, headers=headers, params={"access_token": access_to
 
 print(response.status_code)
 print(response.json())
+
