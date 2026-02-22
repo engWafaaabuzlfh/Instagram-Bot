@@ -1,8 +1,8 @@
-﻿# Instagram Bot (Flask + Webhook)
+﻿# Instagram Bot (Flask + Webhook + Gemini)
 
 A sample Instagram bot project that uses a `Flask` webhook, with basic examples for working with the Meta Graph API.
 
-## Files (After Renaming)
+## Files 
 
 - `instagram_webhook_app.py`: Main app (webhook handling, incoming message processing, and text file upload endpoint).
 - `fetch_facebook_pages.py`: Example script to fetch connected pages/accounts via Graph API.
